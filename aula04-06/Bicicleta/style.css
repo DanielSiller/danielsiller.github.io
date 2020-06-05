@@ -1,0 +1,47 @@
+* {
+margin: 0;
+padding: 0;
+outline: 0;
+box-sizing: border-box;
+background: #293241;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+  font-weight: 700;
+  font-size: 30px;
+  margin: 30px 0;
+  color: #E0FBFC;
+}
+
+button {
+  width: 30%;
+  height: 70px;
+  margin-top: 30px;
+  background: #EE6C4D;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 20px;
+}
+
+button:hover {
+  transform: scale(1.1);
+  color: #E0FBFC;
+}
+
+img {
+  clear: both;
+  width: 50%;
+  height: 50%;
+}
+
+#tempo {
+  margin-right: 20px;
+}

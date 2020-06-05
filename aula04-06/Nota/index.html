@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Compre agora uma nota</title>
+  
+</head>
+<body>
+    <span>Compre agora um nerd para te ajudar naquela matéria que você não se da bem</span>
+    <span class="aproveite">aproveite que é só nas proximas 20 horas</span>
+    <img src="https://portal6.com.br/wp-content/uploads/2017/07/IMG_1067.jpg" alt="nerd">
+    <button>Clique e Confira</button>
+    <div class="containertempo">
+      <span id="tempo"></span>
+      <span class="aproveite">Segundos restantes!</span>
+    </div>
+</body>
+<script type="text/javascript">
+  var count = 260;
+  var tempo = document.getElementById("tempo"); 
+  
+  function start() {
+       if (count > 0){
+          count -= 1;
+          if (count == 0) {
+              count = "Finalizado";
+              tempo.classList.add("actualizado"); 
+          }else if(count < 10){
+              count = "0" + count;
+          }
+          tempo.innerText = count;
+          setTimeout(start, 1000); 
+      }
+  }
+  
+  
+  start();
+      </script>
+</html>
