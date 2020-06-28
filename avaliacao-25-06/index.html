@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
+    <title>SLA</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+
+
+
+<body>
+    <div class="container">
+        <div id="header">
+            <div>
+                <img src="https://s04.video.glbimg.com/x720/8405539.jpg"/>
+            </div>
+
+            <div>
+                <p>casos coronavirus global</p>
+                <label id="date"></label>
+            </div>
+               
+
+        </div>
+
+        <div id="principal">
+
+            <div id="card1">
+            <p>CASOS EM ABRIL</p>
+            </div>
+
+            <div id="card2">
+                <p>CASOS EM MARÇO</p>
+            </div>
+
+            <div id="card3">
+                <p>DIAS ATUAIS</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        var dia = new Date().getDate()
+        var mes = new Date().getMonth()
+        var ano = new Date().getFullYear()
+        
+        
+        window.document.getElementById('date').innerHTML = `${dia}/${mes}/${ano}`
+
+        var canvas = d3.select("#card1")
+        .append("svg")
+
+        var pais1 = canvas.append("rect")
+        .attr("width", 100)
+        .attr("height", 150)
+        .attr("fill","red")
+        .attr("y", 80)
+        
+        var pais2 = canvas.append("rect")
+        .attr("width", 100)
+        .attr("height", 150)
+        .attr("fill","purple")
+        .attr("y", 100)
+        .attr("x", 100)
+
+        var pais3 = canvas.append("rect")
+        .attr("width", 100)
+        .attr("height", 100)
+        .attr("fill","green")
+        .attr("y", 115)
+        .attr("x", 200)
+
+        var pais1Text = canvas.append('text')
+        .attr("x", 25)
+        .attr("y", 145)
+        .attr("fill","white")
+        .text("Canadá")
+
+        var pais2Text = canvas.append('text')
+        .attr("x", 125)
+        .attr("y", 145)
+        .attr("fill","white")
+        .text("França")
+
+        var pais3Text = canvas.append('text')
+        .attr("x", 230)
+        .attr("y", 145)
+        .attr("fill","white")
+        .text("Brasil")
+
+        var pais1Text2 = canvas.append('text')
+        .attr("x", 30)
+        .attr("y", 100)
+        .attr("fill","white")
+        .text("10.000")
+
+        var pais2Text2 = canvas.append('text')
+        .attr("x", 130)
+        .attr("y", 120)
+        .attr("fill","white")
+        .text("8.000")
+
+        var pais3Text2 = canvas.append('text')
+        .attr("x", 230)
+        .attr("y", 130)
+        .attr("fill","white")
+        .text("6.000")
+
+        var canvas = d3.select("#card2")
+        .append("svg")
+
+        var pais1 = canvas.append("rect")
+        .attr("width", 100)
+        .attr("height", 200)
+        .attr("fill","purple")
+        .attr('y', 50)
+        
+        var pais2 = canvas.append("rect")
+        .attr("width", 100)
+        .attr("height", 150)
+        .attr("fill","red")
+        .attr("y", 60)
+        .attr("x", 100)
+
+        var pais3 = canvas.append("rect")
+        .attr("width", 100)
+        .attr("height", 100)
+        .attr("fill","green")
+        .attr("y", 100)
+        .attr("x", 200)
+
+        var pais1Text = canvas.append('text')
+        .attr("x", 30)
+        .attr("y", 145)
+        .attr("fill","white")
+        .text("França")
+
+        var pais2Text = canvas.append('text')
+        .attr("x", 125)
+        .attr("y", 145)
+        .attr("fill","white")
+        .text("Canadá")
+
+        var pais3Text = canvas.append('text')
+        .attr("x", 230)
+        .attr("y", 145)
+        .attr("fill","white")
+        .text("Brasil")
+
+        var pais1Text2 = canvas.append('text')
+        .attr("x", 30)
+        .attr("y", 80)
+        .attr("fill","white")
+        .text("15.000")
+
+        var pais2Text2 = canvas.append('text')
+        .attr("x", 130)
+        .attr("y", 100)
+        .attr("fill","white")
+        .text("13.000")
+
+        var pais3Text2 = canvas.append('text')
+        .attr("x", 230)
+        .attr("y", 120)
+        .attr("fill","white")
+        .text("7.500")
+
+        var canvas = d3.select("#card3")
+        .append("svg")
+
+        var pais1 = canvas.append("rect")
+        .attr("width", 100)
+        .attr("height", 200)
+        .attr("fill","purple")
+        
+        var pais2 = canvas.append("rect")
+        .attr("width", 100)
+        .attr("height", 150)
+        .attr("fill","green")
+        .attr("y", 30)
+        .attr("x", 100)
+
+        var pais3 = canvas.append("rect")
+        .attr("width", 100)
+        .attr("height", 150)
+        .attr("fill","red")
+        .attr("y", 50)
+        .attr("x", 200)
+
+        var pais1Text = canvas.append('text')
+        .attr("x", 25)
+        .attr("y", 145)
+        .attr("fill","white")
+        .text("França")
+
+        var pais2Text = canvas.append('text')
+        .attr("x", 125)
+        .attr("y", 145)
+        .attr("fill","white")
+        .text("Brasil")
+
+        var pais3Text = canvas.append('text')
+        .attr("x", 225)
+        .attr("y", 145)
+        .attr("fill","white")
+        .text("Canada")
+
+        var pais1Text2 = canvas.append('text')
+        .attr("x", 30)
+        .attr("y", 50)
+        .attr("fill","white")
+        .text("20.000")
+
+        var pais2Text2 = canvas.append('text')
+        .attr("x", 130)
+        .attr("y", 80)
+        .attr("fill","white")
+        .text("18.000")
+
+        var pais3Text2 = canvas.append('text')
+        .attr("x", 230)
+        .attr("y", 100)
+        .attr("fill","white")
+        .text("15.000")
+
+            
+        
+
+        
+    </script>
+</body>
+
+
+</html>
