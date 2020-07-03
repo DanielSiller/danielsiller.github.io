@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Prova 02/07</title>
+ </head>
+ <body>
+     <h2>Pegue-me!</h2>
+     <h2>PONTUAÇÃO: <span class="points"></span></h2>
+     
+     <svg width="800" height="500">
+        <circle id='circle' cx="700" cy="300" r="25" fill="purple" />
+    </svg>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+     <script>
+function gera_cor(){
+    var hexadecimais = '0123456789ABCDEF';
+    var cor = '#';
+  
+    // Pega um número aleatório no array acima
+    for (var i = 0; i < 6; i++ ) {
+        cor += hexadecimais[Math.floor(Math.random() * 16)];
+    }
+    
+    return cor;
+}
+var points = 0;
+
+document.querySelector('.points').innerHTML = points
+         d3.select("circle").on("mouseover", function(){
+             d3.select(this).transition()
+                .duration(500)
+                .ease(d3.easeBounce)
+                .attr("fill",gera_cor())
+                .attr("cx",Math.floor(Math.random() * 800))
+                .attr("cy",Math.floor(Math.random() * 500))
+
+                
+         });
+         document.querySelector('#circle').addEventListener('click',
+         function(){
+            document.querySelector('.points').innerHTML = ++points
+         })
+         
+     </script>
+ </body>
+ </html>
